@@ -45,7 +45,8 @@ class SmurfForm extends Component {
 
             <div className = "form-container">
                 <h3>Add a new Smurf</h3>
-                    <form>
+                    <form onSubmit={this.onSubmit}>
+
                         {/* Name */}
                         <input 
                             type="text"
@@ -64,6 +65,7 @@ class SmurfForm extends Component {
                             onChange={this.onChange} 
                             /> <br />
 
+                        {/* Height (in cm) */}
                         <input 
                             type="text"
                             name="height"
