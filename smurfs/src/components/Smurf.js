@@ -3,7 +3,8 @@ import { connect } from 'react-redux'
 
 class Smurf extends Component {
     render() {
-        const { name, age, height, id } = this.props.smurf
+
+        const { name, age, height, id } = this.props
 
         return (
             <div className = "smurf-card">
@@ -12,7 +13,6 @@ class Smurf extends Component {
                     <p className="smurf-age">Age: {age}</p>
                     <p className="smurf-height">Height: {height}</p>
                 </div>
-
             </div>
         )
     }

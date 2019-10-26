@@ -4,15 +4,16 @@ import "./App.css";
 //import components
 import Smurfs from './Smurfs'
 import Smurf from './Smurf'
+import SmurfForm from './SmurfForm'
 
+//import actions
+
+import { addSmurf } from '../actions/index'
 
 
 
 class App extends Component {
 
-  componentDidMount() {
-   
-  }
   render() {
     return (
       <div className="App">
@@ -21,6 +22,9 @@ class App extends Component {
         <div>Start inside of your `src/index.js` file!</div>
         <div>Have fun!</div>
 
+      <SmurfForm />
+
+      <Smurfs />
 
       </div>
     );

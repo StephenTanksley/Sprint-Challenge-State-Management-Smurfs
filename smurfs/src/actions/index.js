@@ -36,15 +36,13 @@ export const getSmurfs = () => {
         axios
         .get('http://localhost:3333/smurfs')
         .then(response => {
-            dispatch({GET_SMURFS_SUCCESS, payload: response.data })
+            dispatch({ type: GET_SMURFS_SUCCESS, payload: response.data })
         })
         .catch(error => {
             dispatch ({ type: GET_SMURFS_FAILED, payload: error})
         })
     }
 }
-
-
 
 //POST request - takes smurf as an argument to update the server with.
 
@@ -55,7 +53,7 @@ export const addSmurf = smurf => {
         axios
         .post('http://localhost:3333/smurfs', smurf)
         .then(response => {
-            dispatch({ADD_SMURF_SUCCESS, payload: response.data })
+            dispatch({ type: ADD_SMURF_SUCCESS, payload: response.data })
         })
         .catch(error => {
             dispatch ({ type: ADD_SMURF_FAILED, payload: error})
