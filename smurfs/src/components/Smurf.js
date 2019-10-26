@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
+// import { connect } from 'react-redux'
 
 class Smurf extends Component {
     render() {
 
-        const { name, age, height, id } = this.props
+        const { name, age, height, id } = this.props.smurf
 
         return (
             <div className = "smurf-card">
                 <div className = "inner-container">
-                    <h4 className="smurf-name">{name}</h4>
+                    <h4 className="smurf-name">Name: {name}</h4>
                     <p className="smurf-age">Age: {age}</p>
                     <p className="smurf-height">Height: {height}</p>
                 </div>

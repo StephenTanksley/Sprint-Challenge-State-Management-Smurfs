@@ -16,13 +16,13 @@ class Smurfs extends Component {
 
         //I'd like to import the spinner from the updateTitle project.
         const { smurfs, gettingSmurfs } = this.props
-
+        console.log(smurfs)
         return (
             <div className='smurfList' >
                 <h3>Smurfs in the village: </h3>
-                {/* {smurfs.map(smurf => (
+                {smurfs.map(smurf => (
                     <Smurf key={smurf.id} smurf={smurf} />
-                ))} */}
+                ))}
             </div>
         )
     }
@@ -34,7 +34,6 @@ const mapStateToProps = state =>  {
         gettingSmurfs: state.gettingSmurfs
     }
 }
-
 
 const mapDispatchToProps = {
     getSmurfs

@@ -15,7 +15,7 @@ import {
 
 
 const initialState = {
-    smurfList : [],
+    smurfs : [],
     gettingSmurfs: false,
     addingSmurfs: false,
     // updatingSmurfs: false,
@@ -38,7 +38,7 @@ export function reducer(state = initialState, action) {
     case GET_SMURFS_SUCCESS: {
                 return {
                     ...state,
-                    smurfList: action.payload,
+                    smurfs: action.payload,
                     gettingSmurfs: false
                 }
             }
@@ -63,7 +63,7 @@ export function reducer(state = initialState, action) {
     case ADD_SMURF_SUCCESS: {
                 return {
                     ...state,
-                    smurfList: action.payload,
+                    smurfs: action.payload,
                     addingSmurfs: false
                 }
             }
